@@ -83,6 +83,7 @@ export default function save({ attributes, className, clientId }) {
 	const blockProps = useBlockProps.save();
 	return (
 		<div>
+			<div id="tabs"></div>
 			<div class="container">
 				<section class="tabs desktop">
 					{tabBar(attributes.tabs)}
