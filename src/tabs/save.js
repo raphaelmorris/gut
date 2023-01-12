@@ -45,21 +45,6 @@ export default function save({ attributes, className, clientId }) {
 								value={tab.title}
 							/>
 					</div>
-
-
-					/*<div className="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex={tab.index} 	>
-						<span className="mdc-tab__content">
-							<RichText.Content
-								tagName="span"
-								className="mdc-tab__text-label"
-								value={tab.title}
-							/>
-						</span>
-						<span className={tab.index == activeTabIndex ? 'mdc-tab-indicator mdc-tab-indicator--active' : 'mdc-tab-indicator'}>
-							<span className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-						</span>
-						<span className="mdc-tab__ripple"></span>
-					</div>*/
 				)
 			})
 		)
