@@ -82,7 +82,7 @@ export default function save({ attributes, className, clientId }) {
 
 	const blockProps = useBlockProps.save();
 	return (
-		<div>
+		<section>
 			<div id="tabs"></div>
 			<div class="container">
 				<section class="tabs desktop">
@@ -96,7 +96,7 @@ export default function save({ attributes, className, clientId }) {
 				</section>
 			</div>
 			<InnerBlocks.Content />
-		</div>
+		</section>
 
 
 	);

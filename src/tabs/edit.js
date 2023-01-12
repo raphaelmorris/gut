@@ -75,7 +75,7 @@ export default function Edit({ attributes: { tabs = [], templates = [] }, setAtt
 			tabs: [...tabs, {
 				tabId,
 				index: tabs.length,
-				title: `Tab ${tabs.length} title`,
+				title: `Titre de l'onglet ${tabs.length}`,
 				description: '',
 			}],
 		});
