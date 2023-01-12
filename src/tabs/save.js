@@ -39,7 +39,15 @@ export default function save({ attributes, className, clientId }) {
 		return (
 			tabs.sort((a, b) => a.index - b.index).map(tab => {
 				return (
-					<div className="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex={tab.index} 	>
+					<div data-tab = {tab.index} data-name={tab.title} className= {tab.index == activeTabIndex ? 'tab-filter active current' : 'tab-filter'}>
+					<RichText.Content
+								tagName="a"
+								value={tab.title}
+							/>
+					</div>
+
+
+					/*<div className="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex={tab.index} 	>
 						<span className="mdc-tab__content">
 							<RichText.Content
 								tagName="span"
@@ -51,7 +59,7 @@ export default function save({ attributes, className, clientId }) {
 							<span className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
 						</span>
 						<span className="mdc-tab__ripple"></span>
-					</div>
+					</div>*/
 				)
 			})
 		)
@@ -61,11 +69,12 @@ export default function save({ attributes, className, clientId }) {
 		return (
 			tabs.sort((a, b) => a.index - b.index).map(tab => {
 				return (
-							<RichText.Content
-								tagName="option"
-								className="mdc-tab__text-label"
-								value={tab.title}
-							/>
+					<RichText.Content
+						tagName="option"
+						className="tabsMobile dropdown"
+						value={tab.title}
+						data-id={tab.index}
+					/>
 				)
 			})
 		)
@@ -73,23 +82,21 @@ export default function save({ attributes, className, clientId }) {
 
 	const blockProps = useBlockProps.save();
 	return (
-		<div  {...blockProps} className="tab-wrap">
-			<div className={className} id={clientId}>
-				<div className="mdc-tab-bar" role="tablist">
-					<div className="mdc-tab-scroller">
-						<div className="mdc-tab-scroller__scroll-area">
-							<div className="mdc-tab-scroller__scroll-content">
-								{tabBar(attributes.tabs)}
-							</div>
-						</div>
-					</div>
-				</div>
-				<select name="" id="">
-					{tabBarSelect(attributes.tabs)}
-				</select>
-				<InnerBlocks.Content />
+		<div>
+			<div class="container">
+				<section class="tabs desktop">
+					{tabBar(attributes.tabs)}
+				</section>
+
+				<section className="tabsMobile dropdown">
+					<select class="">
+						{tabBarSelect(attributes.tabs)}
+					</select>
+				</section>
 			</div>
+			<InnerBlocks.Content />
 		</div>
+
 
 	);
 }

@@ -80,7 +80,7 @@ export default function Edit({ attributes: { tabs = [], templates = [] }, setAtt
 			}],
 		});
 
-		let attr = { 'tabScreenIndex': tabs.length, tabId, index: tabs.length, className: 'brand-tab-screen', };
+		let attr = { 'tabScreenIndex': tabs.length, tabId, index: tabs.length, className: tabCounter == 0 ? 'tab-content current' : 'tab-content', };
 		let blocks = [...inner_blocks, ...[createBlock('brand/tab', attr,)]];
 
 		setActiveTab(tabs.length, blocks)
