@@ -3,10 +3,10 @@
 	"apiVersion": 2,
 	"name": "brand/tab",
 	"version": "0.1.0",
-	"title": "Tab",
-	"category": "design",
-	"icon": "layout",
-	"description": "Example static block scaffolded with Create Block tool.",
+	"title": "Onglet",
+	"category": "dreets",
+	"icon": "arrow-right",
+	"description": "Onglet.",
 	"supports": {
 		"html": false
 	},

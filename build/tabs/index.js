@@ -5816,7 +5816,7 @@ function _extends() {
   \*****************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"mdc/tabs","version":"0.1.0","title":"Tabs","category":"design","icon":"layout","description":"Example static block scaffolded with Create Block tool.","supports":{"html":false},"textdomain":"mdc-tabs","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","styles":[{"name":"default","label":"Default","isDefault":true},{"name":"other","label":"Other"}],"attributes":{"content":{"type":"string","source":"html","selector":"div"},"tabs":{"type":"array","selector":"div"},"style":{"type":"string","default":"none"}}}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"mdc/tabs","version":"0.1.0","title":"Structure en tabulation","category":"dreets","icon":"ellipsis","description":"Ce bloc permet d\'avoir une structure de tabulation pour afficher plusieurs onglets de contenu sur la page.","supports":{"html":false},"textdomain":"mdc-tabs","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","styles":[{"name":"default","label":"Default","isDefault":true},{"name":"other","label":"Other"}],"attributes":{"content":{"type":"string","source":"html","selector":"div"},"tabs":{"type":"array","selector":"div"},"style":{"type":"string","default":"none"}}}');
 
 /***/ })
 
